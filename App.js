@@ -1,13 +1,12 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { View, Text, StyleSheet } from 'react-native';
-import { colors } from './src/theme/colors';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>ICaptivate</Text>
-      <Text style={styles.subtitle}>Mobile App Loading...</Text>
+      <Text style={styles.subtitle}>Your AI Communication Assistant</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -16,18 +15,18 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: '#F9FAFB',
     alignItems: 'center',
     justifyContent: 'center',
   },
   title: {
     fontSize: 32,
     fontWeight: 'bold',
-    color: colors.primary,
+    color: '#7047EB',
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 18,
-    color: colors.textSecondary,
+    color: '#4B5563',
   },
 });
