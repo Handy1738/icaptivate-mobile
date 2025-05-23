@@ -1,18 +1,33 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import Navigation from './src/navigation';
-
-const queryClient = new QueryClient();
+import { View, Text, StyleSheet } from 'react-native';
+import { colors } from './src/theme/colors';
 
 export default function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <SafeAreaProvider>
-        <Navigation />
-        <StatusBar style="auto" />
-      </SafeAreaProvider>
-    </QueryClientProvider>
+    <View style={styles.container}>
+      <Text style={styles.title}>ICaptivate</Text>
+      <Text style={styles.subtitle}>Mobile App Loading...</Text>
+      <StatusBar style="auto" />
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.background,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: colors.primary,
+    marginBottom: 8,
+  },
+  subtitle: {
+    fontSize: 18,
+    color: colors.textSecondary,
+  },
+});
